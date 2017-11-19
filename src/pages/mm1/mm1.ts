@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { Mm1Page } from '../mm1/mm1';
-import { MmcPage } from '../mmc/mmc';
-import { MmckPage } from '../mmck/mmck';
-
 /**
- * Generated class for the ColasPage page.
+ * Generated class for the Mm1Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -14,11 +10,11 @@ import { MmckPage } from '../mmck/mmck';
 
 @IonicPage()
 @Component({
-  selector: 'page-colas',
-  templateUrl: 'colas.html',
+  selector: 'page-mm1',
+  templateUrl: 'mm1.html',
 })
-export class ColasPage {
-
+export class Mm1Page {
+	
 	arribos: number;
 	servicios: number;
 	servidores: number;
@@ -28,12 +24,11 @@ export class ColasPage {
   this.servicios = Number(this.navParams.get('servicios'));
   this.servidores = Number(this.navParams.get('servidores'));
 
+  console.log(this.servidores);
+
   }
-
-  
-
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ColasPage');
+    console.log('ionViewDidLoad Mm1Page');
   }
 
 }

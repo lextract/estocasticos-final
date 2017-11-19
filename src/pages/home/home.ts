@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ColasPage } from '../colas/colas'
+import { ColasPage } from '../colas/colas';
+import { EntropiaPage } from '../entropia/entropia';
 
 
 @Component({
@@ -9,18 +10,20 @@ import { ColasPage } from '../colas/colas'
 })
 export class HomePage {
 
-
-	@ViewChild('arribos') arribos;
-	@ViewChild('servicios') servicios;
-	@ViewChild('servidores') servidores;
-
   constructor(public navCtrl: NavController) {
 
   }
 
-  calcular(){
-  	console.log(this.arribos.val);
-  	this.navCtrl.push(ColasPage, { arribos: this.arribos.value, servicios: this.servicios.value , servidores: this.servidores.value});
+  colas(){
+  	this.navCtrl.push(ColasPage);
+  }
+
+  entropia(){
+    this.navCtrl.push(EntropiaPage);
+  }
+
+  markov(){
+    this.navCtrl.push(ColasPage);
   }
 
 }

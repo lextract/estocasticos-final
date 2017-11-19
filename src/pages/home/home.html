@@ -1,28 +1,41 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Generador de colas	
+      App Academica	
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <ion-label stacked>Tasa de arribos</ion-label>
-    <ion-input type="text" #arribos></ion-input>
-  </ion-item>
+	<ion-card>
+	  <ion-card-content>
+	    <ion-card-title>
+	      Teoria de colas
+	    </ion-card-title>
+	    La teoría de colas es el estudio matemático de las colas o líneas de espera dentro de un sistema. Esta teoría estudia factores como el tiempo de espera medio en las colas o la capacidad de trabajo del sistema sin que llegue a colapsar.
+ 			<button ion-button color="primary" full (click)="colas()">Ir</button>
+	  </ion-card-content>
+	</ion-card>
 
-  <ion-item>
-    <ion-label stacked>Tasa de servicio</ion-label>
-    <ion-input type="text" #servicios></ion-input>
-  </ion-item>
+	<ion-card>
+	  <ion-card-content>
+	    <ion-card-title>
+	      Entropia
+	    </ion-card-title>
+	    La entropia en la teoría de la información es la medida de la incertidumbre que existe ante un conjunto de mensajes (de los cuales sólo se recibirá uno solo). Se trata de una medida de la información que es necesaria para reducir o eliminar la incertidumbre.
+ 			<button ion-button color="primary" full (click)="entropia()">Ir</button>
+	  </ion-card-content>
+	</ion-card>
 
-  <ion-item>
-    <ion-label stacked>Numero de servidores</ion-label>
-    <ion-input type="text" #servidores></ion-input>
-  </ion-item>
 
-
-  <button ion-button color="primary" full (click)="calcular()">Calcular</button>
+	<ion-card>
+	  <ion-card-content>
+	    <ion-card-title>
+	      Cadenas de Markov
+	    </ion-card-title>
+	    Las cadenas de Markov son ...
+ 			<button ion-button color="primary" full (click)="markov()">Ir</button>
+	  </ion-card-content>
+	</ion-card>
 
 </ion-content>

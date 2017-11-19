@@ -7,12 +7,20 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ColasPage } from '../pages/colas/colas';
+import { Mm1Page } from '../pages/mm1/mm1';
+import { MmcPage } from '../pages/mmc/mmc';
+import { MmckPage } from '../pages/mmck/mmck';
+import { EntropiaPage } from '../pages/entropia/entropia';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ColasPage
+    ColasPage,
+    Mm1Page,
+    MmcPage,
+    MmckPage,
+    EntropiaPage
   ],
   imports: [
     BrowserModule,
@@ -22,7 +30,11 @@ import { ColasPage } from '../pages/colas/colas';
   entryComponents: [
     MyApp,
     HomePage,
-    ColasPage
+    ColasPage,
+    Mm1Page,
+    MmcPage,
+    MmckPage,
+    EntropiaPage
   ],
   providers: [
     StatusBar,

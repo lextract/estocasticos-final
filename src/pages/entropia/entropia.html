@@ -1,0 +1,58 @@
+<!--
+  Generated template for the EntropiaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Entropia</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label stacked>Probabilidad 1</ion-label>
+    <ion-input type="text" ngModel="{{0}}" #p1></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Probabilidad 2</ion-label>
+    <ion-input type="text" ngModel="{{0}}" #p2></ion-input>
+  </ion-item>
+
+    <ion-item>
+    <ion-label stacked>Probabilidad 3</ion-label>
+    <ion-input type="text" ngModel="{{0}}" #p3></ion-input>
+  </ion-item>
+
+    <ion-item>
+    <ion-label stacked>Probabilidad 4</ion-label>
+    <ion-input type="text" ngModel="{{0}}" #p4></ion-input>
+  </ion-item>
+
+    <ion-item>
+    <ion-label stacked>Probabilidad 5</ion-label>
+    <ion-input type="text" ngModel="{{0}}" #p5></ion-input>
+  </ion-item>
+
+    <ion-item>
+    <ion-label stacked>Probabilidad 6</ion-label>
+    <ion-input type="text" ngModel="{{0}}" #p6></ion-input>
+  </ion-item>
+
+    <ion-item>
+    <ion-label stacked>Probabilidad 7</ion-label>
+    <ion-input type="text" ngModel="{{0}}" #p7></ion-input>
+  </ion-item>
+
+  <button ion-button color="primary" full (click)="calcular()">Calcular</button>
+
+  <h2> Entropia: </h2>
+  <h3> H(x) = {{ entropia }} </h3>
+
+</ion-content>
