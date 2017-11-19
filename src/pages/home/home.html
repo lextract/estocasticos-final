@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Generador de colas	
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Tasa de arribos</ion-label>
+    <ion-input type="text" #arribos></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Tasa de servicio</ion-label>
+    <ion-input type="text" #servicios></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Numero de servidores</ion-label>
+    <ion-input type="text" #servidores></ion-input>
+  </ion-item>
+
+
+  <button ion-button color="primary" full (click)="calcular()">Calcular</button>
+
+</ion-content>
