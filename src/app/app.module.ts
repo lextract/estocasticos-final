@@ -3,43 +3,49 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ColasPage } from '../pages/colas/colas';
-import { Mm1Page } from '../pages/mm1/mm1';
-import { MmcPage } from '../pages/mmc/mmc';
-import { MmckPage } from '../pages/mmck/mmck';
-import { EntropiaPage } from '../pages/entropia/entropia';
+import { EntidadPage } from '../pages/entidad/entidad';
+import { ServicioPage } from '../pages/servicio/servicio';
+import { MapaPage } from '../pages/mapa/mapa';
+import { EstadisticasPage } from '../pages/estadisticas/estadisticas';
+
+import { EntidadProvider } from '../providers/entidad/entidad';
+import { ServidorProvider } from '../providers/servidor/servidor';
+import { HorarioProvider } from '../providers/horario/horario';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ColasPage,
-    Mm1Page,
-    MmcPage,
-    MmckPage,
-    EntropiaPage
+    EntidadPage,
+    ServicioPage,
+    MapaPage,
+    EstadisticasPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    ColasPage,
-    Mm1Page,
-    MmcPage,
-    MmckPage,
-    EntropiaPage
+    EntidadPage,
+    ServicioPage,
+    MapaPage,
+    EstadisticasPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    EntidadProvider,
+    ServidorProvider,
+    HorarioProvider
   ]
 })
 export class AppModule {}

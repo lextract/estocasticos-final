@@ -1,2 +1,1 @@
-# estocasticos-final
-Apliación mobile para la obtención de resultados de tiempos para los diferentes modelos de colas
+### :point_right: This starter repo has moved to the [ionic-team/starters](https://github.com/ionic-team/starters/tree/master/ionic-angular/official/blank) repo! :point_left:

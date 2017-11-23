@@ -1,8 +1,9 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { ColasPage } from '../colas/colas';
-import { EntropiaPage } from '../entropia/entropia';
 
+import { EntidadProvider } from '../../providers/entidad/entidad';
+
+import { ServicioPage } from '../servicio/servicio';
 
 @Component({
   selector: 'page-home',
@@ -10,20 +11,20 @@ import { EntropiaPage } from '../entropia/entropia';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public entidadProvider: EntidadProvider, public navCtrl: NavController) {
+  	this.getEntidades();
   }
 
-  colas(){
-  	this.navCtrl.push(ColasPage);
+  entidades: any;
+
+  getEntidades(){
+  	this.entidadProvider.getEntidades()
+  	.subscribe(res=>this
+  		.entidades=res);
   }
 
-  entropia(){
-    this.navCtrl.push(EntropiaPage);
-  }
-
-  markov(){
-    this.navCtrl.push(ColasPage);
+  servicios(id){
+    this.navCtrl.push(ServicioPage, { id: id });
   }
 
 }
