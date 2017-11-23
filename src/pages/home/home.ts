@@ -4,6 +4,7 @@ import { NavController } from 'ionic-angular';
 import { EntidadProvider } from '../../providers/entidad/entidad';
 
 import { ServicioPage } from '../servicio/servicio';
+import { MapaPage } from '../mapa/mapa';
 
 @Component({
   selector: 'page-home',
@@ -25,6 +26,10 @@ export class HomePage {
 
   servicios(id){
     this.navCtrl.push(ServicioPage, { id: id });
+  }
+
+    mapa(entidad){
+    this.navCtrl.push(MapaPage, { entidad:entidad});
   }
 
 }

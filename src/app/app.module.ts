@@ -11,10 +11,21 @@ import { EntidadPage } from '../pages/entidad/entidad';
 import { ServicioPage } from '../pages/servicio/servicio';
 import { MapaPage } from '../pages/mapa/mapa';
 import { EstadisticasPage } from '../pages/estadisticas/estadisticas';
+import { Estadisticas2Page } from '../pages/estadisticas2/estadisticas2';
 
 import { EntidadProvider } from '../providers/entidad/entidad';
 import { ServidorProvider } from '../providers/servidor/servidor';
 import { HorarioProvider } from '../providers/horario/horario';
+
+import {
+ GoogleMaps,
+ GoogleMap,
+ GoogleMapsEvent,
+ GoogleMapOptions,
+ CameraPosition,
+ MarkerOptions,
+ Marker
+} from '@ionic-native/google-maps';
 
 @NgModule({
   declarations: [
@@ -23,7 +34,8 @@ import { HorarioProvider } from '../providers/horario/horario';
     EntidadPage,
     ServicioPage,
     MapaPage,
-    EstadisticasPage
+    EstadisticasPage,
+    Estadisticas2Page
   ],
   imports: [
     BrowserModule,
@@ -37,7 +49,8 @@ import { HorarioProvider } from '../providers/horario/horario';
     EntidadPage,
     ServicioPage,
     MapaPage,
-    EstadisticasPage
+    EstadisticasPage,
+    Estadisticas2Page
   ],
   providers: [
     StatusBar,
@@ -45,7 +58,8 @@ import { HorarioProvider } from '../providers/horario/horario';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     EntidadProvider,
     ServidorProvider,
-    HorarioProvider
+    HorarioProvider,
+    GoogleMaps
   ]
 })
 export class AppModule {}

@@ -41,30 +41,50 @@ export class EstadisticasPage {
   this.getHorarios();
 
   //for(let horario in this.horarios){
-  	//this.tiempos.push(Array({'id': 3,'name': "cds"}));
+  	//this.tiempos.push(Array({'id': 3,'tiempo': 5}));
   //}
 
 
+interface IMyEntity {
+    hora: number;
+    tiempo: number;    
+}
+
+var data = [
+    { hora: 0, tiempo: 2}
+];
+
+//for(let horario in hor){
+//	data.push( { hora: horario.hora, tiempo: 0 } );
+//}
+
+
+var tiempos : IMyEntity[] = data;
+
+this.tiempos = tiempos;
+
+
   //FALTA ITERAR SOBRE HORARIOS:
+
+
+
   this.tiempo_sistema = 1/(this.tasa_servidores-this.tasa_arribo);
-  console.log(this.tiempo_sistema);
+  //console.log(this.tiempo_sistema);
 
   this.tiempo_cola = this.tasa_arribo/(this.tasa_servidores*(this.tasa_servidores-this.tasa_arribo));
-  console.log(this.tiempo_cola);
+  //console.log(this.tiempo_cola);
 
   this.tiempo_servicio = 1/this.tasa_servidores;
-  console.log(this.tiempo_servicio);
+  //console.log(this.tiempo_servicio);
 
   }
-
 
 
   getHorarios(){
 	this.horarioProvider.getHorarios(this.servicio_id)
 	.subscribe(res=>this
-		.horarios=res);
+		.horarios=res.json());
   }
-
 
   
 
